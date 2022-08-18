@@ -4,15 +4,16 @@
 
 }
 
-.barpic {
-/* background-position: cover; */
-    /* justify-content: flex-end; */
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    align-items: center;
-/* margin-left: 10rem; */
-}
-
 .main-container {
     background-color: black;
+}
+
+.pic-container {
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.barpic {
+    max-width: 100%;
+    height: auto;
 }
