@@ -1,5 +1,5 @@
-.main-menu .active {
-    color: yellow;
+.nav-bar .active {
+    color: red;
   }
   
   .main-menu ul {
@@ -7,8 +7,42 @@
     gap: 1rem;
     list-style: none;
     width: 100%;
+    font-style: color black;
+
+  }
+
+  .nav-bar li nav {
+    font-style: color black;
   }
   
   .push-right {
     margin-left: auto;
+  }
+
+  .nav-bar {
+    background:	#2f4f4f;
+    padding: 20px 0 20px 0;
+    flex-grow: 1;
+    align-items: stretch;
+  }
+
+  .nav-bar ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .push-right {
+    margin-left: auto;
+    padding-right: 1rem;
+  }
+
+  .home {
+    margin-right: auto;
+    padding-left: 1rem;
+
+  }
+  
+
+  .active {
+    color: red;
   }

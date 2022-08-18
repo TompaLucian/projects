@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.barpic {
+/* background-position: cover; */
+    /* justify-content: flex-end; */
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    align-items: center;
+/* margin-left: 10rem; */
+}
+
+.main-container {
+    background-color: black;
+}
