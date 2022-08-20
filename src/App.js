@@ -5,8 +5,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Nav } from "./components/Nav/Nav";
 import { Auth } from "./features/Auth/Auth";
 import { Home } from "./features/Home/Home";
-import { ProductDetails } from "./features/Products/ProductDetails";
 import { Products } from "./features/Products/Products";
+import { ProductDetails } from "./features/Products/ProductDetails";
+
 
 function App() {
     return (
@@ -16,7 +17,7 @@ function App() {
                 <Route path="/Home" element={<Home/>} />
                 <Route path="/auth" element={<Auth/>} />
                 <Route path="/products" element={<Products/>} />
-                <Route path="/products" element={<ProductDetails/>} />
+                <Route path="/products/:productId" element={<ProductDetails/>} />
             </Routes>
         </BrowserRouter>
     );

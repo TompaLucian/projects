@@ -18,6 +18,7 @@
   .nav-bar {
     background:	#2f4f4f;
     padding: 30px 0 30px 0;
+    border: 6px #563f46 solid;
   }
 
   .nav-bar ul {

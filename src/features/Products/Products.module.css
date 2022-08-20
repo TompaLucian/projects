@@ -7,7 +7,12 @@
 .main-section {
     background-color:  #3b3832;
     display: grid;
+    padding-left: 2rem;
+    box-sizing: border-box;
     grid-template-columns: repeat(auto-fit,  minmax(500px, 1fr));
+    width: 100;
+    height: auto;
+    border: 6px #563f46 solid;
 }
 
 .main-section h1 {
@@ -15,10 +20,12 @@
 }
 
 .img {
-    border: 2px black solid;
     gap: 1rem;
     width: auto;
     height: auto;
     max-width: 450px;
     max-height: 450px;
+    justify-content: space-around;
+    border: 2px black solid;
+
 }
