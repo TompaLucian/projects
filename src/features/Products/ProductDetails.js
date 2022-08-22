@@ -19,8 +19,10 @@ export function ProductDetails () {
 
     return (
         <>
-            <h1>Product Details</h1>
+            <h1>Find out more about our programms:</h1>
             <h2>{product.name}</h2>
+            <img src={product.image} alt={`${product.name} Image`}/> 
+            <p>{product.description}</p>
 
         </>
     );
