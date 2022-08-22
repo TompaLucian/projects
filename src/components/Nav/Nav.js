@@ -9,17 +9,17 @@ export function Nav() {
             <nav>
                 <ul>
                     <li className={styles['home']}>
-                        <NavLink className={({isActive}) => isActive ? styles.active : ""} to="/Home">
+                        <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/Home">
                             Home
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink className={({isActive}) => isActive ? styles.active : ""} to="/Products">
+                        <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/Products">
                             Products
                         </NavLink>
                     </li>
                     <li className={styles['push-right']}>
-                        <NavLink className={({isActive}) => isActive ? styles.active : ""} to="/auth">
+                        <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/auth">
                             Login
                         </NavLink>
                     </li>

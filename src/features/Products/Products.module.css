@@ -4,12 +4,17 @@
 
 }
 
+.inactive {
+    color: white;
+  }
+
 .main-section {
+    gap: 2rem;
     background-color:  #3b3832;
     display: grid;
     padding-left: 2rem;
     box-sizing: border-box;
-    grid-template-columns: repeat(auto-fit,  minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit,  minmax(100px, 600px));
     width: 100;
     height: auto;
     border: 6px #563f46 solid;
@@ -19,13 +24,12 @@
     grid-column: 1/-1;
 }
 
-.img {
-    gap: 1rem;
-    width: auto;
+.poster {
+    width: 100%;
     height: auto;
     max-width: 450px;
     max-height: 450px;
     justify-content: space-around;
     border: 2px black solid;
-
+    border-radius: 15px;
 }

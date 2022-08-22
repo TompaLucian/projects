@@ -3,11 +3,14 @@ import styles from "./Products.module.css";
 
 export function ProductCard({ item }) {
 return (
-    <article>
-        <Link to={`/products/${item.id}`}>
-            <h2>{item.name}</h2>
-            <img className={styles['img']} src={item.image} alt={`${item.name} image`} />
-        </Link>
-    </article>
+    <div>
+        <article>
+            <Link to={`/products/${item.id}`}>
+                <h2>{item.name}</h2>
+                <img className={styles['poster']} src={item.image} alt={`${item.name} poster`} />
+            </Link>
+        </article>
+    </div>
+
     );
 }

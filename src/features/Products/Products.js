@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useEffect, useState } from "react";
 import { ProductCard } from "./ProductCard";
 
@@ -15,15 +17,6 @@ export function Products () {
     if (!products) {
         return <strong>Loading..</strong>;
     }
-
-    // const productList = [];
-    // for ( product of products) {
-    //     productList.push(
-    //         <article>
-    //             <h2>{product.name}</h2>
-    //         </article>
-    //     );
-    // }
 
     return (
         <section className={styles['main-section']}>

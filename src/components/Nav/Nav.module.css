@@ -1,6 +1,10 @@
 .active {
     color: red;
   }
+
+.inactive {
+    color: white;
+  }
   
   ul {
     display: flex;
@@ -34,6 +38,5 @@
   .home {
     margin-right: auto;
     padding-left: 1rem;
-
   }
   
