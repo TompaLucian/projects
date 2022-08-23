@@ -7,6 +7,9 @@ export function Nav() {
         <>
         <header className={styles['nav-bar']}>
             <nav>
+               <div>
+                    <h1 className={styles['title']}>BAR BROTHERS GYM</h1>
+               </div>
                 <ul>
                     <li className={styles['home']}>
                         <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/Home">

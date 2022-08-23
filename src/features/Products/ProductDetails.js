@@ -21,8 +21,9 @@ export function ProductDetails () {
         <>
             <h1>Find out more about our programms:</h1>
             <h2>{product.name}</h2>
+            <p><strong>Price: {product.price} $/month</strong></p>
             <img src={product.image} alt={`${product.name} Image`}/> 
-            <p>{product.description}</p>
+            <p><strong>{product.description}</strong></p>
 
         </>
     );

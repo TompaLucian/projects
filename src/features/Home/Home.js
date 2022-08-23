@@ -6,7 +6,7 @@ export function Home() {
          <section className={styles['main-container']}>
             <h1>Welcome to the bar!</h1>
             <div className={styles['pic-container']}>
-               <img className={styles['barpic']} src="https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGd5bXxlbnwwfHwwfHw%3D&w=1000&q=80" />
+               <img className={styles['barpic']} alt="main-pic" src="https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGd5bXxlbnwwfHwwfHw%3D&w=1000&q=80" />
             </div>
 
          </section>

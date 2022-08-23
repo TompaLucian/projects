@@ -1,3 +1,11 @@
+.title {
+  text-align: center;
+  padding: 1rem;
+  font-size: xx-large;
+  width: 100%;
+  height: auto;
+}
+
 .active {
     color: red;
   }
@@ -12,7 +20,7 @@
     list-style: none;
     width: 100%;
     font-style: color black;
-
+    font-size: x-large;
   }
   
   .push-right {
@@ -23,6 +31,8 @@
     background:	#2f4f4f;
     padding: 30px 0 30px 0;
     border: 6px #563f46 solid;
+    width: 100%;
+    height: auto;
   }
 
   .nav-bar ul {
