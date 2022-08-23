@@ -5,7 +5,8 @@
 }
 
 .main-container {
-    background-color: black;
+    background-color:  #3b3832;
+    border: 6px #563f46 solid;
 }
 
 .pic-container {

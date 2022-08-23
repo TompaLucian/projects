@@ -22,8 +22,13 @@ export function Nav() {
                         </NavLink>
                     </li>
                     <li className={styles['push-right']}>
-                        <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/auth">
+                        <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/login">
                             Login
+                        </NavLink>
+                    </li>
+                    <li className={styles['push-right']}>
+                        <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/register">
+                            Register
                         </NavLink>
                     </li>
                 </ul>
