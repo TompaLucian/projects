@@ -5,6 +5,7 @@
       "password": "$2a$10$gNJ8OlRkHAfjyA72kEWeC.zs/rU2XAY46z6OQ9WMMwFGZsIl0PPEa",
       "firstName": "Andrei",
       "lastName": "Pop",
+      "isAdmin": true,
       "id": 1
     },
     {

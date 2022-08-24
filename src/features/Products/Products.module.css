@@ -42,3 +42,14 @@
     border: 2px black solid;
     border-radius: 15px;
 }
+
+.add_product {
+    color: #0c3931;
+    font-weight: bolder;
+    font-size: x-large;
+    background-color: #bbae80;
+    padding: 0.5rem;
+    width:fit-content;
+    border-radius: 5px;
+
+}
