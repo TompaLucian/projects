@@ -1,7 +1,7 @@
 .title {
   text-align: center;
-  padding: 1rem;
-  font-size: xx-large;
+  /* padding: 1rem; */
+  font-size: medium;
   width: 100%;
   height: auto;
 }
@@ -24,8 +24,8 @@
   }
   
   .nav-bar {
-    background:	#2f4f4f;
-    padding: 30px 0 30px 0;
+    background:	#0c3931;
+    padding-bottom: 1rem;
     border: 6px #563f46 solid;
     width: 100%;
     height: auto;
@@ -33,7 +33,7 @@
 
   .nav-bar ul {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .push-right {
@@ -44,5 +44,9 @@
   .home {
     margin-right: auto;
     padding-left: 1rem;
+  }
+
+  .products {
+    margin-right: auto;
   }
   

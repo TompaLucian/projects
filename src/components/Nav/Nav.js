@@ -8,7 +8,7 @@ export function Nav() {
         <header className={styles['nav-bar']}>
             <nav>
                <div>
-                    <h1 className={styles['title']}>BAR BROTHERS GYM</h1>
+                    <h1 className={styles['title']}><img className={styles['logo']} src="/logo/logo.png" alt="logo"/></h1>
                </div>
                 <ul>
                     <li className={styles['home']}>
@@ -16,7 +16,7 @@ export function Nav() {
                             Home
                         </NavLink>
                     </li>
-                    <li>
+                    <li className={styles['products']}>
                         <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/Products">
                             Products
                         </NavLink>

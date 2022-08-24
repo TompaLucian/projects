@@ -6,6 +6,7 @@
 
 .register {
     padding: 1rem;
+    color: bisque;
 }
 
 .form p {
@@ -15,6 +16,7 @@
 
 .label {
     font-weight: bold;
+    color: bisque;
 }
 
 .input {
@@ -31,4 +33,15 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+.server {
+    color: red;
+}
+
+.email, .password-err, .retype_password-err, .firstName-err, .lastName-err {
+    color: red;
+}
+
+
+
 

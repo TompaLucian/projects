@@ -15,7 +15,7 @@
     padding: 0.5rem;
     padding-left: 2rem;
     box-sizing: border-box;
-    grid-template-columns: repeat(auto-fit,  minmax(100px, 600px));
+    grid-template-columns: repeat(auto-fit,  minmax(100px, 500px));
     width: 100;
     height: auto;
     border: 6px #563f46 solid;
