@@ -28,8 +28,8 @@ export function Nav() {
                     {user && (
                         <li className={styles['push-right']}>
                             Welcome, 
-                            <NavLink  to="/profile">
-                            {user.firstName}!{' '}
+                            <NavLink className={styles['username']} to="/profile">
+                            {' '}{user.firstName}!{' '}
                             </NavLink>
                             <a href="/" onClick={(e) => {
                                e.preventDefault();

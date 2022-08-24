@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Navigate, useLocation } from "react-router-dom";
 import styles from "./Auth.module.css";
 import { useAuthContext } from "./AuthContext";
 
@@ -20,7 +21,15 @@ export function Auth() {
         serverError: '',
     });
 
-    const { login }= useAuthContext();
+    const { login, accessToken }= useAuthContext();
+
+    const { pathname } = useLocation();
+    const isRegister = (pathname === '/register');
+
+    if(accessToken) {
+        return <Navigate to="/Home/"/>;
+     }
+  
 
     function handleInputChange(e) {
         setErrors({...errors, [e.target.name]: '' });
@@ -30,16 +39,25 @@ export function Auth() {
     async function handleSubmit(e) {
         e.preventDefault();
 
-        const validation = validateForm(values);
+        const validation = validateForm(values, isRegister);
 
         if(!validation.isValid) {
             setErrors(validation.errors)
             return;
         }
     
-       const { retype_password, ...dataForServer } = values;
+       let { retype_password, ...dataForServer } = values;
 
-       const data = await fetch('http://localhost:3005/api/register', {
+       let apiPath = 'register';
+       if(!isRegister) {
+        dataForServer = {
+            email: values.email,
+            password: values.password, 
+        }
+        apiPath = 'login';
+       }
+
+       const data = await fetch(`http://localhost:3005/api/${apiPath}`, {
         method: 'POST',
         headers: {
             'Content-type': 'application/json',
@@ -55,14 +73,15 @@ export function Auth() {
        }
 
        login(data);
-       
+
     }
 
 
     return (
         <>
         <div className={styles['main-container']}>
-            <h1 className={styles['register']}>Register</h1>
+            <img className={styles['form_pic']} alt="form-pic" src="https://signsofthetimes.org.au/wp-content/uploads/2018/08/p20-Couple-post-workout-wordpress-1.png" />
+            <h1 className={styles['register']}>{isRegister ? 'Register' : 'Login'}</h1>
             {errors.serverError && <p className={styles['server']}>{errors.serverError}</p>}
             <form onSubmit={handleSubmit} className={styles['form']}>
                 <p>
@@ -87,41 +106,47 @@ export function Auth() {
                      </input>
                 </p>
                 {errors.password && <p className={styles['password-err']}>{errors.password}</p>}
+
+                {isRegister && (
+                    <>
+                        <p>
+                            <label className={styles['label']} htmlFor="retype_password">Re-type Password</label>
+                            <input className={styles['input']}
+                            type="password" 
+                            name="retype_password" 
+                            id="retype_password"
+                            value={values.retype_password}
+                            onChange={handleInputChange}>
+                            </input>
+                        </p>
+                        {errors.retype_password && <p className={styles['retype_password-err']}>{errors.retype_password}</p>}
+                        <p>
+                            <label className={styles['label']} htmlFor="firstName">First Name</label>
+                            <input className={styles['input']}
+                            type="text" 
+                            name="firstName" 
+                            id="firstName"
+                            value={values.firstName}
+                            onChange={handleInputChange}>
+                            </input>
+                        </p>
+                        {errors.firstName && <p className={styles['firstName-err']}>{errors.firstName}</p>}
+                        <p>
+                            <label className={styles['label']} htmlFor="lastName">Last Name</label>
+                            <input className={styles['input']}
+                            type="text" 
+                            name="lastName" 
+                            id="lastName"                     
+                            value={values.lastName}
+                            onChange={handleInputChange}>
+                            </input>
+                        </p>
+                        {errors.lastName && <p className={styles['lastName-err']}>{errors.lastName}</p>}
+                    </>
+                )}
+
                 <p>
-                    <label className={styles['label']} htmlFor="retype_password">Re-type Password</label>
-                    <input className={styles['input']}
-                     type="password" 
-                     name="retype_password" 
-                     id="retype_password"
-                     value={values.retype_password}
-                     onChange={handleInputChange}>
-                     </input>
-                </p>
-                {errors.retype_password && <p className={styles['retype_password-err']}>{errors.retype_password}</p>}
-                <p>
-                    <label className={styles['label']} htmlFor="firstName">First Name</label>
-                    <input className={styles['input']}
-                     type="text" 
-                     name="firstName" 
-                     id="firstName"
-                     value={values.firstName}
-                     onChange={handleInputChange}>
-                     </input>
-                </p>
-                {errors.firstName && <p className={styles['firstName-err']}>{errors.firstName}</p>}
-                <p>
-                    <label className={styles['label']} htmlFor="lastName">Last Name</label>
-                    <input className={styles['input']}
-                     type="text" 
-                     name="lastName" 
-                     id="lastName"                     
-                     value={values.lastName}
-                     onChange={handleInputChange}>
-                     </input>
-                </p>
-                {errors.lastName && <p className={styles['lastName-err']}>{errors.lastName}</p>}
-                <p>
-                    <button className={styles['button']}>Register</button>
+                    <button className={styles['button']}>{isRegister ? 'Register' : 'Login'}</button>
                 </p>
             </form>
         </div>
@@ -129,7 +154,7 @@ export function Auth() {
     )
 };
 
-function validateForm(values) {
+function validateForm(values, isRegister) {
     const validation = {
         errors: {
             email: '',
@@ -155,6 +180,7 @@ function validateForm(values) {
         validation.errors.password = 'Please enter a password that is at least 6 characters long';
     }
 
+    if(isRegister) {
     if(values.password !== values.retype_password) {
         validation.isValid = false;
         validation.errors.retype_password = "Please enter the same password as above";
@@ -170,6 +196,7 @@ function validateForm(values) {
         validation.isValid = false;
         validation.errors.lastName = "Please enter your last name";
     }
+}
 
     return validation;
 }

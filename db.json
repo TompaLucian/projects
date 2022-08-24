@@ -62,6 +62,13 @@
       "firstName": "Irina",
       "lastName": "Ban",
       "id": 9
+    },
+    {
+      "email": "radu@gmail.com",
+      "password": "$2a$10$Qzwr5YE5qc3mk0zUJdTlIeGtyDGosIF.da5XXhiaIdzvj/owqn812",
+      "firstName": "Radu",
+      "lastName": "Itu",
+      "id": 10
     }
   ],
   "products": [
