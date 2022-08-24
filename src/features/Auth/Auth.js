@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Auth.module.css";
+import { useAuthContext } from "./AuthContext";
 
 export function Auth() {
     const [values, setValues] = useState({
@@ -19,12 +20,14 @@ export function Auth() {
         serverError: '',
     });
 
+    const { login }= useAuthContext();
+
     function handleInputChange(e) {
-        setErrors({...errors, [e.target.name]: ''});
-        setValues({...values, [e.target.name]: e.target.value}); 
+        setErrors({...errors, [e.target.name]: '' });
+        setValues({...values, [e.target.name]: e.target.value }); 
     }
     
-    async function HandleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
         const validation = validateForm(values);
@@ -34,7 +37,7 @@ export function Auth() {
             return;
         }
     
-       const {retype_password, ...dataForServer} = values;
+       const { retype_password, ...dataForServer } = values;
 
        const data = await fetch('http://localhost:3005/api/register', {
         method: 'POST',
@@ -45,9 +48,14 @@ export function Auth() {
        }).then((res) => res.json());
 
        console.log(data);
-       if(!data.accesToken) {
+
+       if(!data.accessToken) {
         setErrors({...errors, serverError: data});
+        return;
        }
+
+       login(data);
+       
     }
 
 
@@ -56,7 +64,7 @@ export function Auth() {
         <div className={styles['main-container']}>
             <h1 className={styles['register']}>Register</h1>
             {errors.serverError && <p className={styles['server']}>{errors.serverError}</p>}
-            <form onSubmit={HandleSubmit} className={styles['form']}>
+            <form onSubmit={handleSubmit} className={styles['form']}>
                 <p>
                     <label className={styles['label']} htmlFor="email">Email</label>
                     <input className={styles['input']}

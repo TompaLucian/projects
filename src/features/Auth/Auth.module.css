@@ -36,6 +36,12 @@
 
 .server {
     color: red;
+    font-size: x-large;
+    background-color: rgb(223, 140, 174);
+    padding: 0.5rem;
+    width:fit-content;
+    margin: auto;
+    border-radius: 10px;
 }
 
 .email, .password-err, .retype_password-err, .firstName-err, .lastName-err {
