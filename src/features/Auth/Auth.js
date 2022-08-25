@@ -80,7 +80,7 @@ export function Auth() {
     return (
         <>
         <div className={styles['main-container']}>
-            <img className={styles['form_pic']} alt="form-pic" src="https://signsofthetimes.org.au/wp-content/uploads/2018/08/p20-Couple-post-workout-wordpress-1.png" />
+            <img className={styles['form_pic']} alt="form-pic" src="https://images.squarespace-cdn.com/content/v1/59e50cf8f09ca4dd03953fb6/1569595583027-TICQWXHMUBCT9GO6ULZY/iStock-874700028.jpg?format=2500w" />
             <h1 className={styles['register']}>{isRegister ? 'Register' : 'Login'}</h1>
             {errors.serverError && <p className={styles['server']}>{errors.serverError}</p>}
             <form onSubmit={handleSubmit} className={styles['form']}>
