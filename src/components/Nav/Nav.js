@@ -21,7 +21,7 @@ export function Nav() {
                     </li>
                     <li className={styles['products']}>
                         <NavLink className={({isActive}) => isActive ? styles.active : styles.inactive} to="/Products">
-                            Products
+                            Our programs
                         </NavLink>
                     </li>
 

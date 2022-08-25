@@ -7,11 +7,11 @@
 }
 
 .active {
-    color: yellow;
+    color: white;
   }
 
 .inactive {
-    color: white;
+    color: #ffa800;
   }
   
   ul {
@@ -19,7 +19,7 @@
     gap: 1rem;
     list-style: none;
     width: 100%;
-    font-style: color black;
+    font-style: color #ffa800;
     font-size: x-large;
   }
   
