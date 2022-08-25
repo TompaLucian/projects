@@ -4,7 +4,7 @@ import styles from "./Products.module.css";
 
 
 
-export function AddProduct () {
+export function AddProduct() {
     const [values, setValues] = useState({
         name: '',
         poster: '',
@@ -25,12 +25,12 @@ export function AddProduct () {
     }
 
     async function handleSubmit(e) {
-        e.PreventDefault();
-        const data = await fetch('http://localhost:3005/products', {
+        e.preventDefault();
+        const data = await fetch('http://localhost:3005/api/products', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
-                'Authorization': `Bearer ${accessToken}`,
+                Authorization: `Bearer ${accessToken}`,
             },
             body: JSON.stringify(values),
         }).then((res) => res.json());
@@ -66,7 +66,7 @@ export function AddProduct () {
             </p>
             {errors.poster && <p className={styles['add_poster']}>{errors.poster}</p>}
             <p>
-            <button className={styles['button']}>Add Program</button>
+            <button type="submit" className={styles['button']}>Add Program</button>
             </p>
 
         </form>

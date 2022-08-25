@@ -24,7 +24,7 @@ export function Products () {
     return (
         <section className={styles['main-section']}>
             { user && (
-            <Link className={styles['add_product']} to="/Products/AddProduct">Add new program</Link> 
+            <Link className={styles['add_product']} to="/products/add">Add new program</Link> 
             )}
             <h1>Get in shape with our programs:</h1>
             {products.map((product) => 
