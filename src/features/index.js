@@ -1,6 +1,7 @@
-export {Auth} from "./Auth";
-export {Home} from "./Homepage";
-export {Products} from "./Products";
-export {ProductDetails} from "./ProductDetails";
+export {Auth} from "./features/Auth/Auth";
+export {Home} from "./features/Home";
+export {Products} from ".src/features/Products/Products";
+export {ProductDetails} from "./src/features/Products/ProductDetails";
 export {AddProduct} from "./Products/AddProduct";
+export {EditProduct} from "./features/Products/EditProduct";
 export { AuthContextProvider, useAuthContext } from './Auth/AuthContext';

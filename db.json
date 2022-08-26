@@ -121,9 +121,14 @@
       "price": "25"
     },
     {
-      "name": "lucian",
+      "name": "Lucian Tompa",
       "poster": "https://img.freepik.com/free-photo/athletic-man-woman-with-dumbbells-training-practicing-gym_155003-13043.jpg?w=2000",
-      "id": 5
+      "id": 6
+    },
+    {
+      "name": "Dalia Ghejan",
+      "poster": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "id": 7
     }
   ],
   "movies": [

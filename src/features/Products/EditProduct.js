@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { useAuthContext } from "../Auth/AuthContext";
 import styles from "./Products.module.css";
 
 
 
-export function AddProduct() {
+export function EditProduct() {
     const [values, setValues] = useState({
         name: '',
         poster: '',
@@ -16,19 +16,28 @@ export function AddProduct() {
         poster: '',
     });
 
+    const { productId } = useParams();
+
+    useEffect(() => {
+        fetch('http://localhost:3005/products/' + productId)
+        .then(res => res.json())
+        .then((data) => setValues(data));
+    }, [productId])
+    
+
     const [message, setMessage] = useState('');
     
     const {accessToken} = useAuthContext();
 
     function handleInputChange(e) {
-        setErrors({...errors, [e.target.name]: '' });
-        setValues({...values, [e.target.name]: e.target.value }); 
+        setErrors({ ...errors, [e.target.name]: '' });
+        setValues({ ...values, [e.target.name]: e.target.value }); 
     }
 
     async function handleSubmit(e) {
         e.preventDefault();
-        const data = await fetch('http://localhost:3005/api/products/', {
-            method: 'POST',
+        const data = await fetch('http://localhost:3005/products/' + values.id, {
+            method: 'PATCH',
             headers: {
                 'Content-type': 'application/json',
                 Authorization: `Bearer ${accessToken}`,
@@ -36,16 +45,16 @@ export function AddProduct() {
             body: JSON.stringify(values),
         }).then((res) => res.json());
 
-        setMessage('Congrats! You have added your program.');    
+        setMessage('Your program was updated successfully');    
     }
 
     return (
         <>
-        <h1>Add your program</h1>
+        <h1>Edit the program: {values.name}</h1>
         <form onSubmit={handleSubmit}> 
         {message && (<p className={styles['message']}>{message}</p>)}
             <p>
-                <label className={styles['label']} htmlFor="email">Name</label>
+                <label className={styles['label']} htmlFor="name">Name</label>
                 <input className={styles['input']}
                  type="text" 
                  name="name" 
@@ -56,7 +65,7 @@ export function AddProduct() {
             </p>
             {errors.name && <p className={styles['add_name']}>{errors.name}</p>}
             <p>
-                <label className={styles['label']} htmlFor="email">Poster</label>
+                <label className={styles['label']} htmlFor="poster">Poster</label>
                 <input className={styles['input']}
                  type="text" 
                  name="poster" 
@@ -67,12 +76,10 @@ export function AddProduct() {
             </p>
             {errors.poster && <p className={styles['add_poster']}>{errors.poster}</p>}
             <p>
-            <button type="submit" className={styles['button']}>Add Program</button>
+            <button type="submit" className={styles['button']}>Finish</button>
             </p>
 
         </form>
         </>
-
     )
-    
 }
