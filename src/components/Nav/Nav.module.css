@@ -24,16 +24,36 @@
   }
   
   .nav-bar {
-    background:	#0c3931;
+    background-image: url(https://images.alphacoders.com/692/692039.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    object-position: cover;
+      /* background:	#0c3931; */
     padding-bottom: 1rem;
     border: 6px #563f46 solid;
     width: 100%;
     height: auto;
+    /* max-width: 100%;
+    max-height: 100%; */
   }
 
   .nav-bar ul {
     display: flex;
     gap: 2rem;
+  }
+
+  .nav-bar ul li{
+    background-color: rgb(46, 2, 24);
+    padding: 0.5rem;
+    width:fit-content;
+    margin: auto;
+    border-radius: 10px;
+
+  }
+
+  .logo {
+    border-radius: 10px;
+    margin-top: 0.5rem;
   }
 
   .push-right {

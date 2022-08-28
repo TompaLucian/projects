@@ -10,6 +10,7 @@ import { ProductDetails } from "./features/Products/ProductDetails";
 import { AuthContextProvider } from "./features/Auth/AuthContext";
 import { AddProduct } from "./features/Products/AddProduct";
 import { EditProduct } from "./features/Products/EditProduct";
+import { EditProfile } from "./features/Auth/EditProfile";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/Home" element={<Home/>} />
                     <Route path="/login" element={<Auth/>} />
                     <Route path="/register" element={<Auth/>} />
+                    <Route path="/profile" element={<EditProfile/>} />
                     <Route path="/products" element={<Products/>} />
                     <Route path="/products/add" element={<AddProduct/>} />
                     <Route path="/products/edit/:productId" element={<EditProduct/>} />

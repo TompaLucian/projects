@@ -83,7 +83,7 @@
     {
       "id": 1,
       "name": "Bodybuilding",
-      "genre": "male",
+      "length": "90",
       "type": "fitness",
       "poster": "https://images.unsplash.com/photo-1544033527-b192daee1f5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       "description": "test",
@@ -93,7 +93,7 @@
     {
       "id": 2,
       "name": "HIIT & Cardio",
-      "genre": "female",
+      "length": "60",
       "type": "fitness",
       "poster": "https://images.unsplash.com/photo-1434596922112-19c563067271?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       "description": "test2",
@@ -103,17 +103,17 @@
     {
       "id": 3,
       "name": "Cross-Fit",
-      "genre": "male",
+      "length": "120",
       "type": "fitness",
       "poster": "https://images.unsplash.com/photo-1506197061617-7f5c0b093236?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=818&q=80",
       "description": "test3",
       "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
-      "price": "35"
+      "price": "10"
     },
     {
       "id": 4,
       "name": "Yoga",
-      "genre": "female",
+      "length": "60",
       "type": "fitness",
       "poster": "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       "description": "test4",
@@ -123,12 +123,19 @@
     {
       "name": "Lucian Tompa",
       "poster": "https://img.freepik.com/free-photo/athletic-man-woman-with-dumbbells-training-practicing-gym_155003-13043.jpg?w=2000",
-      "id": 6
+      "length": "30",
+      "id": 6,
+      "price": "1"
     },
     {
       "name": "Dalia Ghejan",
-      "poster": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      "id": 7
+      "poster": "https://img.freepik.com/free-photo/athletic-man-woman-with-dumbbells-training-practicing-gym_155003-13043.jpg?w=2000",
+      "id": 7,
+      "length": "",
+      "price": "5",
+      "type": "wheightloss",
+      "description": "r21r21",
+      "image": "https://img.freepik.com/free-photo/athletic-man-woman-with-dumbbells-training-practicing-gym_155003-13043.jpg?w=2000"
     }
   ],
   "movies": [

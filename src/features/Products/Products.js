@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../Auth/AuthContext';
@@ -7,9 +6,11 @@ import { ProductCard } from "./ProductCard";
 
 import styles from "./Products.module.css";
 
+
 export function Products () {
     const [products, setProducts] = useState(null);
     const {user} = useAuthContext();
+
 
     useEffect(() => {
         fetch('http://localhost:3005/api/products')

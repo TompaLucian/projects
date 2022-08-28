@@ -16,14 +16,14 @@
     padding-left: 2rem;
     box-sizing: border-box;
     grid-template-columns: repeat(auto-fit,  minmax(100px, 500px));
-    width: 100;
+    width: 100%;
     height: auto;
     border: 6px #563f46 solid;
 }
 
 .main-section h1 {
     grid-column: 1/-1;
-    color: #cc8600;
+    color: bisque;
 
 }
 
@@ -46,12 +46,78 @@
 }
 
 .add_product {
-    color: #0c3931;
+    color: #cc8600;
     font-weight: bolder;
     font-size: x-large;
-    background-color: #bbae80;
+    background-color: rgb(46, 2, 24);
     padding: 0.5rem;
     width:fit-content;
     border-radius: 5px;
 
 }
+
+.product_container {
+    gap: 2rem;
+    background-color:  #3b3832;
+    color: white;
+    display: grid;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    box-sizing: border-box;
+    width: 100;
+    height: auto;
+    border: 6px #563f46 solid;
+}
+
+.img_details {
+    max-height: 650px;
+    max-width: 650px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.delete_button {
+    background-color: rgb(153, 15, 15);
+    font-weight: bold;
+    padding: 0.5rem;
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+    margin: 0.5rem;
+}
+
+.edit_link {
+    background-color: rgb(226, 240, 35);
+    font-weight: bold;
+    padding: 0.3rem;
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+    margin: 0.5rem;
+}
+
+.product_form {
+
+}
+
+.label {
+    font-weight: bold;
+    color: bisque;
+}
+
+.input {
+    border: 2px black solid;
+    border-radius: 5px;
+    margin-left: 3px;
+    background-color: lightblue;
+}
+
+.button {
+    background-color: #40b18b;
+    border-style:outset;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
