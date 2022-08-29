@@ -10,15 +10,15 @@
     },
     {
       "email": "vlad@gmail.com",
-      "password": "$2a$10$iLIAz.RTdXApUFP3oRycReuYJbkv1BXtIs0kdZlULJ3vA0zwthEsy",
+      "password": "",
       "firstName": "Vlad",
       "lastName": "Ene",
       "id": 2
     },
     {
       "email": "mihai@gmail.com",
-      "password": "$2a$10$4HuF/r3qEmKoCBNGNHDZBefOebaDNL8XeGj.eOVEE2fgitKaqBrvy",
-      "firstName": "MIhai",
+      "password": "$2a$10$WpZpvFCuA0iqXOwmRhaLvugJQLpyyzwsvlJvgDQqsu2laV8rJNU3K",
+      "firstName": "Mihai",
       "lastName": "Muresan",
       "id": 3
     },
@@ -84,6 +84,13 @@
       "firstName": "Vlad",
       "lastName": "Petrican",
       "id": 12
+    },
+    {
+      "email": "razvan@gmail.com",
+      "password": "$2a$10$i3Ts56n.uF2hoz8Cr49GI.JCIvnoqrmfee.sAtX0wvbPda6.Ai34S",
+      "firstName": "razvan",
+      "lastName": "dan",
+      "id": 13
     }
   ],
   "products": [

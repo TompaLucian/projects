@@ -50,13 +50,15 @@ export function EditProfile() {
 
 
     async function handleSubmit(e) {
+        e.preventDefault();
+
         const userToUpdate= {
             email: e.target.email.value,
             password: e.target.newpassword.value,
             firstName: e.target.firstName.value,
             lastName: e.target.lastName.value,
         }
-        e.preventDefault();
+        
         const data = await fetch(`http://localhost:3005/users/${user.id}`  , {
             method: 'PATCH',
             headers: {
@@ -122,7 +124,7 @@ export function EditProfile() {
                         onChange={handleInputChange}>
                         </input>
                     </p>
-                    {errors.retype_password && <p className={styles['retype_password-err']}>{errors.retype_password}</p>}
+                    {errors.retype_newpassword && <p className={styles['retype_password-err']}>{errors.retype_newpassword}</p>}
                     <p>
                         <label className={styles['label']} htmlFor="firstName">First Name</label>
                         <input className={styles['input']}
@@ -161,10 +163,11 @@ const validation = {
     errors: {
         email: '',
         password: '',
-        retype_password: '',
+        newpassword: '',
+        retype_newpassword: '',
         firstName: '',
         lastName: '',
-    },
+        },
     isValid: true,
 };
 
@@ -182,9 +185,9 @@ const validation = {
         validation.errors.password = 'Please enter a password that is at least 6 characters long';
     }
 
-    if(values.password !== values.retype_password) {
+    if(values.newpassword !== values.retype_newpassword) {
         validation.isValid = false;
-        validation.errors.retype_password = "Please enter the same password as above";
+        validation.errors.retype_newpassword = "Please enter the same password as above";
     }
 
     if (!values.firstName) {

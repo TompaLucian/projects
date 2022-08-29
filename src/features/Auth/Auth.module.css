@@ -46,11 +46,11 @@
 
 .server {
     color: red;
-    font-size: x-large;
+    font-size: large;
+    font-weight: bold;
     background-color: rgb(223, 140, 174);
     padding: 0.5rem;
     width:fit-content;
-    margin: auto;
     border-radius: 10px;
 }
 

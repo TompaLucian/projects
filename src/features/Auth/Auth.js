@@ -175,7 +175,7 @@ function validateForm(values, isRegister) {
         validation.errors.email = 'Please enter a valid email address';
     }
 
-    if (!values.password || values.password.lenght < 6) {
+    if (!values.password || values.password.length < 6) {
         validation.isValid = false;
         validation.errors.password = 'Please enter a password that is at least 6 characters long';
     }
