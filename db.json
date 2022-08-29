@@ -83,12 +83,12 @@
     {
       "id": 1,
       "name": "Bodybuilding",
-      "length": "90",
-      "type": "fitness",
+      "length": "60",
+      "type": "fitness, muscle growth",
       "poster": "https://images.unsplash.com/photo-1544033527-b192daee1f5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      "description": "test",
+      "description": "Bodybuilding is the use of progressive resistance exercise to control and develop one's muscles (muscle building) by muscle hypertrophy for aesthetic purposes.",
       "image": "https://barbend.com/wp-content/uploads/2021/11/BarBend-Article-Image-760-x-427-59.jpg",
-      "price": "40"
+      "price": "50"
     },
     {
       "id": 2,
@@ -103,39 +103,42 @@
     {
       "id": 3,
       "name": "Cross-Fit",
-      "length": "120",
+      "length": "90",
       "type": "fitness",
       "poster": "https://images.unsplash.com/photo-1506197061617-7f5c0b093236?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=818&q=80",
-      "description": "test3",
+      "description": "Crossfit is based on a series of functional trainings, which are performed at a high degree of intensity and which have the role of increasing resistance and strengthening the muscles, thus improving physical condition. A main feature of this type of training is the execution of exercises in intervals, addressing different types of movements. This strategy is more effective because the body will not get used to a single type of exercise and the muscles will be taken by surprise each time.",
       "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
-      "price": "10"
+      "price": "45"
     },
     {
       "id": 4,
       "name": "Yoga",
       "length": "60",
-      "type": "fitness",
+      "type": "Anaerobic exercise, relaxation",
       "poster": "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      "description": "test4",
+      "description": "Yoga is essentially a discipline based on achieving harmony between mind and body. It is both an art and a science of healthy living. On a tangible level, yoga is an ancient form of physical exercise that emphasizes body strength, flexibility, and breathing techniques to improve both emotional and physical well-being. The most important components of this practice are the yoga poses, designed to increase the strength and flexibility of the body.",
       "image": "https://images.unsplash.com/photo-1588286840104-8957b019727f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      "price": "25"
+      "price": "35"
     },
     {
-      "name": "Lucian Tompa",
-      "poster": "https://img.freepik.com/free-photo/athletic-man-woman-with-dumbbells-training-practicing-gym_155003-13043.jpg?w=2000",
+      "name": "Cycling",
+      "poster": "https://www.siroko.com/blog/c/app/uploads/2021/07/fitness_21858fa8-864f-404f-9bf5-c2a7d5f72ed7-1440x900.jpg",
       "length": "30",
       "id": 6,
-      "price": "1"
+      "price": "40",
+      "type": "cardio, weightloss",
+      "description": "Cycling is an excellent cardio workout, similar to jogging and aerobics classes.\nThrough this method, you work, first of all, your leg muscles, which are put to work seriously during increasingly accelerated pedaling. Calves, quadriceps, glutes: during cycling sessions, you will tone your legs in an efficient way.",
+      "image": "https://www.mensjournal.com/wp-content/uploads/2018/06/CyclingClass.jpg?w=900&h=506&crop=1&quality=86&strip=all"
     },
     {
-      "name": "Dalia Ghejan",
-      "poster": "https://img.freepik.com/free-photo/athletic-man-woman-with-dumbbells-training-practicing-gym_155003-13043.jpg?w=2000",
+      "name": "Zumba",
+      "poster": "https://www.liveabout.com/thmb/2iaRppZnx9-FN9ozY8-pPMtacd8=/2136x1403/filters:fill(auto,1)/dance-fitness-1067009516-5c81907946e0fb0001136604.jpg",
       "id": 7,
-      "length": "",
-      "price": "5",
-      "type": "wheightloss",
-      "description": "r21r21",
-      "image": "https://img.freepik.com/free-photo/athletic-man-woman-with-dumbbells-training-practicing-gym_155003-13043.jpg?w=2000"
+      "length": "60",
+      "price": "45",
+      "type": "cardio, dance",
+      "description": "Zumba is a fitness program inspired by Latin dances.\nIt involves a combination of elements related to dance and elements from the sphere of aerobics. Zumba choreography incorporates moves from hip-hop, soca, samba, salsa, merengue, reggaeton, mambo, martial arts, and even Bollywood, namely belly dancing. Squat and stretching exercises are also included.\nZumba is a good workout for your mental health because it causes the release of endorphins and neurotransmitters that can improve mood and eliminate stress hormones from the body.",
+      "image": "https://i.pinimg.com/originals/77/b1/78/77b178fed0cf8a1d73f01f36795b8155.jpg"
     }
   ],
   "movies": [

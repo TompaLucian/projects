@@ -10,14 +10,42 @@
     /* color: #cc8600; */
     color: bisque;
 }
+.main-container h1 {
+text-align: center;
+font-size: xx-large;
+padding-top: 1rem;
+}
+
+.home-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    color: white;
+
+}
 
 .pic-container {
     background-repeat: no-repeat;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .barpic {
+    border-radius: 15px;
     max-width: 100%;
     height: auto;
-    border-radius: 15px;
+}
+
+.home-text div {
+    padding: 1rem;
+}
+
+.register {
+    color: #cc8600;
+    font-weight: bolder;
+    font-size: medium;
+    background-color: rgb(46, 2, 24);
+    padding: 0.5rem;
+    width: fit-content;
+    border-radius: 5px;
 }

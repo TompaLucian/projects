@@ -39,23 +39,28 @@ export function ProductDetails () {
 
     return (
         <>
-            <div className={styles['product_container']}>
+            <section className={styles['product_container']}>
                 <h1>Find out more about our programms:</h1>
-                <h2>{product.name}</h2>
-                <div className={styles['product_details']}>
-                    <p><strong>Price: {product.price} $/month</strong></p>
-                    <p><strong>Class length: {product.length} minutes</strong></p>
-                    <p><strong>{product.description}</strong></p>
-                    <img className={styles['img_details']} src={product.image} alt={`${product.name} Image`}/> 
-                </div>
-                <div>
-                { user && (
-                        <><button className={styles['delete_button']} onClick={handleDeleteProgram}>Delete program</button>
-                        <Link className={styles['edit_link']} to={`/products/edit/${product.id}`}>Edit your program</Link>
-                        </>
-                    )}
-                </div>
-            </div>    
+                <div className={styles['product_details']}>   
+                    <div>
+                    <h2>{product.name}</h2>
+                        <p><strong>{product.description}</strong></p>
+                        <p><strong>Type: {product.type} </strong></p>
+                        <p><strong>Price: {product.price} $/month</strong></p>
+                        <p><strong>Class length: {product.length} minutes</strong></p>
+                    </div> 
+                    <div>       
+                        <img className={styles['img_details']} src={product.image} alt={`${product.name} Image`}/> 
+                    </div>
+                </div>    
+                    <div>
+                    { user && (
+                            <><button className={styles['delete_button']} onClick={handleDeleteProgram}>Delete program</button>
+                            <Link className={styles['edit_link']} to={`/products/edit/${product.id}`}>Edit your program</Link>
+                            </>
+                        )}
+                    </div>
+            </section>    
         </>
     );
 }

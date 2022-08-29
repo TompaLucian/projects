@@ -31,7 +31,7 @@ export function Nav() {
                             <NavLink className={styles['username']} to="/profile">
                             {' '}{user.firstName}!{' '}
                             </NavLink>
-                            <a href="/" onClick={(e) => {
+                            <a href="/Home" onClick={(e) => {
                                e.preventDefault();
                                logout(); 
                             }}>
