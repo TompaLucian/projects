@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import { Navigate, useLocation } from "react-router-dom";
 import styles from "./Auth.module.css";
 import { useAuthContext } from "./AuthContext";
 
@@ -26,8 +25,20 @@ export function EditProfile() {
     const { userId } = useParams();
     const {user} = useAuthContext();
     
+    // useEffect(() => {
+    //     fetch('http://localhost:3005/users/' + userId)
+    //     .then((res) => res.json())
+    //     .then((data) => setValues(data));
+    // }, [userId])
+
     useEffect(() => {
-        fetch('http://localhost:3005/users/' + userId)
+        fetch(`http://localhost:3005/users/` + userId, {
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json',
+                Authorization: `Bearer ${accessToken}`,
+            },
+        })
         .then((res) => res.json())
         .then((data) => setValues(data));
     }, [userId])
@@ -46,7 +57,7 @@ export function EditProfile() {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        const data = await fetch('http://localhost:3005/users/' + values.id, {
+        const data = await fetch('http://localhost:3005/users/', {
             method: 'PATCH',
             headers: {
                 'Content-type': 'application/json',
