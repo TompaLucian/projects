@@ -28,7 +28,7 @@ export function Nav() {
                     {user && (
                         <li className={styles['push-right']}>
                             Welcome, 
-                            <NavLink className={styles['username']} to="/profile">
+                            <NavLink className={styles['username']} to={`/profile/edit/${user.id}`}>
                             {' '}{user.firstName}!{' '}
                             </NavLink>
                             <a href="/Home" onClick={(e) => {

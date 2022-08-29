@@ -8,18 +8,20 @@ export function EditProfile() {
     const [values, setValues] = useState({
     email: '',
     password: '',
-    retype_password: '',
+    newpassword: '',
+    retype_newpassword: '',
     firstName: '',
     lastName: '',
 });
     
     const [errors, setErrors] = useState({
-    email: '',
-    password: '',
-    retype_password: '',
-    firstName: '',
-    lastName: '',
-});
+        email: '',
+        password: '',
+        newpassword: '',
+        retype_newpassword: '',
+        firstName: '',
+        lastName: '',
+    });
     
     const { userId } = useParams();
     const {user} = useAuthContext();
@@ -32,14 +34,14 @@ export function EditProfile() {
 
 
     const [message, setMessage] = useState('');
-
+    
+    const {accessToken} = useAuthContext();
 
     function handleInputChange(e) {
-        setErrors({ ...errors, [e.target.name]: '' });
-        setValues({ ...values, [e.target.name]: e.target.value }); 
+        setErrors({ errors, [e.target.name]: '' });
+        setValues({ values, [e.target.name]: e.target.value }); 
     }
 
-    const {accessToken} = useAuthContext();
 
 
     async function handleSubmit(e) {
@@ -61,68 +63,82 @@ export function EditProfile() {
         { user && (
         <div className={styles['main-container']}>
             <img className={styles['form_pic']} alt="form-pic" src="https://images.squarespace-cdn.com/content/v1/59e50cf8f09ca4dd03953fb6/1569595583027-TICQWXHMUBCT9GO6ULZY/iStock-874700028.jpg?format=2500w" />
-            <h1 className={styles['register']}>Update your info</h1>
-            {errors.serverError && <p className={styles['server']}>{errors.serverError}</p>}
-            <form onSubmit={handleSubmit} className={styles['form']}>
-                <p>
-                    <label className={styles['label']} htmlFor="email">Email</label>
-                    <input className={styles['input']}
-                        type="email" 
-                        name="email" 
-                        id="email"
-                        value={values.email}
-                        onChange={handleInputChange}>
-                        </input>
-                </p>
-                {errors.email && <p className={styles['email']}>{errors.email}</p>}
-                <p>
-                    <label className={styles['label']} htmlFor="password">Password</label>
-                    <input className={styles['input']}
+            <div>
+                <h1 className={styles['register']}>Update your info</h1>
+                {message && (<p className={styles['message']}>{message}</p>)}
+                {errors.serverError && <p className={styles['server']}>{errors.serverError}</p>}
+                <form onSubmit={handleSubmit} className={styles['form']}>
+                    <p>
+                        <label className={styles['label']} htmlFor="email">Email</label>
+                        <input className={styles['input']}
+                            type="email" 
+                            name="email" 
+                            id="email"
+                            value={values.email}
+                            onChange={handleInputChange}>
+                            </input>
+                    </p>
+                    {errors.email && <p className={styles['email']}>{errors.email}</p>}
+                    <p>
+                        <label className={styles['label']} htmlFor="password">Password</label>
+                        <input className={styles['input']}
+                            type="password" 
+                            name="password" 
+                            id="password"                     
+                            value={values.password}    
+                            onChange={handleInputChange}>
+                            </input>
+                    </p>
+                    {errors.password && <p className={styles['password-err']}>{errors.password}</p>}
+                    <p>
+                        <label className={styles['label']} htmlFor="newpassword">New password</label>
+                        <input className={styles['input']}
+                            type="password" 
+                            name="newpassword" 
+                            id="newpassword"                     
+                            value={values.newpassword}    
+                            onChange={handleInputChange}>
+                            </input>
+                    </p>
+                    {errors.password && <p className={styles['password-err']}>{errors.password}</p>}
+                    <p>
+                        <label className={styles['label']} htmlFor="retype_newpassword">Re-type new password</label>
+                        <input className={styles['input']}
                         type="password" 
-                        name="password" 
-                        id="password"                     
-                        value={values.password}    
+                        name="retype_newpassword" 
+                        id="retype_newpassword"
+                        value={values.retype_newpassword}
                         onChange={handleInputChange}>
                         </input>
-                </p>
-                {errors.password && <p className={styles['password-err']}>{errors.password}</p>}
-                <p>
-                    <label className={styles['label']} htmlFor="retype_password">Re-type Password</label>
-                    <input className={styles['input']}
-                    type="password" 
-                    name="retype_password" 
-                    id="retype_password"
-                    value={values.retype_password}
-                    onChange={handleInputChange}>
-                    </input>
-                </p>
-                {errors.retype_password && <p className={styles['retype_password-err']}>{errors.retype_password}</p>}
-                <p>
-                    <label className={styles['label']} htmlFor="firstName">First Name</label>
-                    <input className={styles['input']}
-                    type="text" 
-                    name="firstName" 
-                    id="firstName"
-                    value={values.firstName}
-                    onChange={handleInputChange}>
-                    </input>
-                </p>
-                {errors.firstName && <p className={styles['firstName-err']}>{errors.firstName}</p>}
-                <p>
-                    <label className={styles['label']} htmlFor="lastName">Last Name</label>
-                    <input className={styles['input']}
-                    type="text" 
-                    name="lastName" 
-                    id="lastName"                     
-                    value={values.lastName}
-                    onChange={handleInputChange}>
-                    </input>
-                </p>
-                {errors.lastName && <p className={styles['lastName-err']}>{errors.lastName}</p>}
-                <p>
-                    <button className={styles['button']}>Update</button>
-                </p>
-            </form>
+                    </p>
+                    {errors.retype_password && <p className={styles['retype_password-err']}>{errors.retype_password}</p>}
+                    <p>
+                        <label className={styles['label']} htmlFor="firstName">First Name</label>
+                        <input className={styles['input']}
+                        type="text" 
+                        name="firstName" 
+                        id="firstName"
+                        value={values.firstName}
+                        onChange={handleInputChange}>
+                        </input>
+                    </p>
+                    {errors.firstName && <p className={styles['firstName-err']}>{errors.firstName}</p>}
+                    <p>
+                        <label className={styles['label']} htmlFor="lastName">Last Name</label>
+                        <input className={styles['input']}
+                        type="text" 
+                        name="lastName" 
+                        id="lastName"                     
+                        value={values.lastName}
+                        onChange={handleInputChange}>
+                        </input>
+                    </p>
+                    {errors.lastName && <p className={styles['lastName-err']}>{errors.lastName}</p>}
+                    <p>
+                        <button className={styles['button']}>Update</button>
+                    </p>
+                </form>
+            </div>
         </div>
         )}
         </>

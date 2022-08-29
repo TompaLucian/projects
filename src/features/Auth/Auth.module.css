@@ -1,7 +1,13 @@
 .main-container {
     background-color:  #3b3832;
     border: 6px #563f46 solid;
-    text-align: center;
+    /* text-align: center; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    color: white;
+
     /* display: grid; */
     /* padding: 1rem; */
     /* grid-template-columns:50%; */
@@ -34,6 +40,7 @@
     border-style:outset;
     border-radius: 5px;
     font-weight: bold;
+    padding: 0.5rem;
     cursor: pointer;
 }
 
@@ -54,8 +61,8 @@
 .form_pic {
     width: 100%;
     height: auto;
-    max-width: 800px;
-    max-height: 800px;
+    max-width: 700px;
+    max-height: 700px;
     border-radius: 10px;
     padding-top: 2rem;
 }

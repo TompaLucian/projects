@@ -85,29 +85,29 @@
       "name": "Bodybuilding",
       "length": "60",
       "type": "fitness, muscle growth",
-      "poster": "https://images.unsplash.com/photo-1544033527-b192daee1f5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      "description": "Bodybuilding is the use of progressive resistance exercise to control and develop one's muscles (muscle building) by muscle hypertrophy for aesthetic purposes.",
+      "poster": "https://www.muscleandfitness.com/wp-content/uploads/2016/03/ben-pakulski-lifting-straps.jpg?quality=86&strip=all",
+      "description": "Bodybuilding is the use of progressive resistance exercise to control and develop one's muscles (muscle building) by muscle hypertrophy for aesthetic purposes. Bodybuilding, weight training and aerobic exercise increase self-esteem, improve your health and body, lift your mood, reduce stress and frustration, improve your sleeping patterns, distract your mind from worries and difficult life events and situations, help you gain control of your life, body and mind.\nGoing to the gym can relieve stress, anxiety and depression. Seeing real results can improve your mood and give you a sense of satisfaction to further progress and develop through fitness. Bodybuilding can enhance your self-esteem and confidence by giving you a more positive outlook on your own image.",
       "image": "https://barbend.com/wp-content/uploads/2021/11/BarBend-Article-Image-760-x-427-59.jpg",
       "price": "50"
     },
     {
       "id": 2,
-      "name": "HIIT & Cardio",
+      "name": "HIIT",
       "length": "60",
-      "type": "fitness",
+      "type": "fitness, wheightloss",
       "poster": "https://images.unsplash.com/photo-1434596922112-19c563067271?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      "description": "test2",
+      "description": "High-intensity interval training is a training protocol alternating short periods of intense or explosive anaerobic exercise with brief recovery periods until the point of exhaustion, which thereby relies on \"the anaerobic energy releasing system almost maximally.\nHIIT helps people to burn fat and carbohydrates within a short period of activity. People who do HIIT may also benefit from a revved up metabolism post-workout. HIIT has been shown to increase resting energy expenditure, which means your body is continuing to burn calories at an elevated rate even after you exercise.",
       "image": "https://manofmany.com/wp-content/uploads/2020/08/Best-Hiit-workouts-for-men-3.jpg",
-      "price": "30"
+      "price": "40"
     },
     {
       "id": 3,
       "name": "Cross-Fit",
-      "length": "90",
+      "length": "120",
       "type": "fitness",
       "poster": "https://images.unsplash.com/photo-1506197061617-7f5c0b093236?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=818&q=80",
       "description": "Crossfit is based on a series of functional trainings, which are performed at a high degree of intensity and which have the role of increasing resistance and strengthening the muscles, thus improving physical condition. A main feature of this type of training is the execution of exercises in intervals, addressing different types of movements. This strategy is more effective because the body will not get used to a single type of exercise and the muscles will be taken by surprise each time.",
-      "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+      "image": "https://www.verywellfit.com/thmb/5sGkFmPNAqSy_CisbHTmDaBrQvE=/1779x1334/smart/filters:no_upscale()/crossfit-5a31622b482c520037a7a2f7.jpg",
       "price": "45"
     },
     {
@@ -139,6 +139,39 @@
       "type": "cardio, dance",
       "description": "Zumba is a fitness program inspired by Latin dances.\nIt involves a combination of elements related to dance and elements from the sphere of aerobics. Zumba choreography incorporates moves from hip-hop, soca, samba, salsa, merengue, reggaeton, mambo, martial arts, and even Bollywood, namely belly dancing. Squat and stretching exercises are also included.\nZumba is a good workout for your mental health because it causes the release of endorphins and neurotransmitters that can improve mood and eliminate stress hormones from the body.",
       "image": "https://i.pinimg.com/originals/77/b1/78/77b178fed0cf8a1d73f01f36795b8155.jpg"
+    },
+    {
+      "name": "TRX",
+      "lenghth": "",
+      "type": "fitness",
+      "poster": "https://dimifitness.ro/wp-content/uploads/2020/08/4-TRX-Mat.jpg",
+      "description": "TRX provides a fast, effective full-body workout that helps develop and strengthen the \"core\" area and increase muscle endurance. It's a smart training system that uses gravity and body weight for hundreds of exercises. You decide how much you want each exercise to challenge you, you can quickly adjust your body position to increase or decrease the resistance.\nTrx is recommended in recovery training for those who have problems with their wrists or back",
+      "image": "https://s13emagst.akamaized.net/products/40372/40371606/images/res_471b0a8cf3aa8b52f7ae52f85b786c5e.jpg",
+      "price": "50",
+      "length": "60",
+      "id": 8
+    },
+    {
+      "name": "TAEKWONDO",
+      "lenghth": "",
+      "type": "martial arts, self-defence, cardio",
+      "poster": "https://wallpaperaccess.com/full/630467.jpg",
+      "description": "Taekwondo, Tae Kwon Do or Taekwon-Do is a Korean form of martial arts characterized by punching and kicking techniques, with emphasis on head-height kicks, spinning jump kicks, and fast kicking techniques. The literal translation for tae kwon do is \"kicking,\" \"punching,\" and \"the art or way of.\"\nThe goal of this martial art is to give a sense of self-esteem, knowledge of self-defense, heightened mental and physical well being. These assets attribute to a common goal of harmony.\n",
+      "image": "https://unifil.unmissions.org/sites/default/files/field/image/5dm32901.jpg",
+      "price": "45",
+      "length": "90",
+      "id": 9
+    },
+    {
+      "name": "AEROBICS",
+      "lenghth": "",
+      "type": "cardio, fitness, wheightloss",
+      "poster": "https://www.aria.com.ro/sport/static/continut//1000x667px-aerobic12.png",
+      "description": "Aerobics is a form of physical exercise that combines rhythmic aerobic exercise with stretching and strength training routines with the aim of improving all elements of fitness (flexibility, muscular strength and cardiovascular fitness).\nAerobics includes exercises during which oxygen consumption is higher than the rest of the time. Even the word \"aerobic\" means \"in the presence of oxygen.\" These types of exercises are of moderate intensity, therefore they can be sustained for a few minutes, their purpose being to improve the general state of health.",
+      "image": "https://www.youdeal.ro/admin/images/Attachments/xabonament-aerobic-luni-cluj-arena-fitness-4.jpg,qw=570,ah=350,afit=crop.pagespeed.ic.Op8vP51xOX.jpg",
+      "price": "45",
+      "length": "60",
+      "id": 10
     }
   ],
   "movies": [
