@@ -40,7 +40,7 @@ export function ProductDetails () {
     return (
         <>
             <section className={styles['product_container']}>
-                <h1>Find out more about our programms:</h1>
+                <h1>Find out more about our programs:</h1>
                 <div className={styles['product_details']}>   
                     <div>
                     <h2>{product.name}</h2>
