@@ -46,7 +46,7 @@ export function ProductDetails () {
                     <h2>{product.name}</h2>
                         <p><strong>{product.description}</strong></p>
                         <p><strong>Type: {product.type} </strong></p>
-                        <p><strong>Price: {product.price} $/month</strong></p>
+                        <p><strong>Price: {product.price} $/ month</strong></p>
                         <p><strong>Class length: {product.length} minutes</strong></p>
                     </div> 
                     <div>       
@@ -54,7 +54,7 @@ export function ProductDetails () {
                     </div>
                 </div>    
                     <div>
-                    { user && (
+                    { user?.isAdmin && (
                             <><button className={styles['delete_button']} onClick={handleDeleteProgram}>Delete program</button>
                             <Link className={styles['edit_link']} to={`/products/edit/${product.id}`}>Edit your program</Link>
                             </>

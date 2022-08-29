@@ -65,8 +65,6 @@ export function Auth() {
         body: JSON.stringify(dataForServer),
        }).then((res) => res.json());
 
-       console.log(data);
-
        if(!data.accessToken) {
         setErrors({...errors, serverError: data});
         return;

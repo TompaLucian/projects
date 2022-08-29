@@ -77,6 +77,13 @@
       "firstName": "Dan",
       "lastName": "Ilie",
       "id": 11
+    },
+    {
+      "email": "petrican@gmail.com",
+      "password": "$2a$10$vkl71gw5Z4tSqp69AuEd4utoEugtfMVH.q0MIB6eWN8kNQj50Deve",
+      "firstName": "Vlad",
+      "lastName": "Petrican",
+      "id": 12
     }
   ],
   "products": [

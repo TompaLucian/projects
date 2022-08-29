@@ -25,12 +25,6 @@ export function EditProfile() {
     const { userId } = useParams();
     const {user} = useAuthContext();
     
-    // useEffect(() => {
-    //     fetch('http://localhost:3005/users/' + userId)
-    //     .then((res) => res.json())
-    //     .then((data) => setValues(data));
-    // }, [userId])
-
     useEffect(() => {
         fetch(`http://localhost:3005/users/` + userId, {
             method: 'GET',
