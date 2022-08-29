@@ -56,14 +56,20 @@ export function EditProfile() {
 
 
     async function handleSubmit(e) {
+        const userToUpdate= {
+            email: e.target.email.value,
+            password: e.target.newpassword.value,
+            firstName: e.target.firstName.value,
+            lastName: e.target.lastName.value,
+        }
         e.preventDefault();
-        const data = await fetch('http://localhost:3005/users/', {
+        const data = await fetch(`http://localhost:3005/users/${user.id}`  , {
             method: 'PATCH',
             headers: {
                 'Content-type': 'application/json',
                 Authorization: `Bearer ${accessToken}`,
             },
-            body: JSON.stringify(values),
+            body: JSON.stringify(userToUpdate),
         }).then((res) => res.json());
 
         setMessage('Your info was updated successfully');    

@@ -2,16 +2,16 @@
   "users": [
     {
       "email": "andreipop@gmail.com",
-      "password": "$2a$10$gNJ8OlRkHAfjyA72kEWeC.zs/rU2XAY46z6OQ9WMMwFGZsIl0PPEa",
+      "password": "$2a$10$kmFU1u4HSRDwtFnoQNBbSu2qUY6cWWWoVqkyDmL4wf1XkY/lIPIxO",
       "firstName": "Andrei",
       "lastName": "Pop",
       "isAdmin": true,
       "id": 1
     },
     {
-      "email": "ana@gmail.com",
-      "password": "$2a$10$dWaU0nu2BQQoFfi9nJshVuLw11dg02SGckc4ucBSUauptJrcrFeMm",
-      "firstName": "Ana",
+      "email": "vlad@gmail.com",
+      "password": "$2a$10$iLIAz.RTdXApUFP3oRycReuYJbkv1BXtIs0kdZlULJ3vA0zwthEsy",
+      "firstName": "Vlad",
       "lastName": "Ene",
       "id": 2
     },
