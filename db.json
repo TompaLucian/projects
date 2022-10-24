@@ -91,6 +91,13 @@
       "firstName": "razvan",
       "lastName": "dan",
       "id": 13
+    },
+    {
+      "email": "ion@gmail.com",
+      "password": "$2a$10$7VvBmGY1EOxMDDvUZ9WxgOUDXbVVvAEMqH3YwRYfERt1zPU71tsjW",
+      "firstName": "mihai",
+      "lastName": "paul",
+      "id": 14
     }
   ],
   "products": [
